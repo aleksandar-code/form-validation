@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="validation.js" defer></script>
+    <title>Form validation</title>
+  </head>
+  <body>
+    <form novalidate action="" method="post">
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Odin@Odin"
+        required
+      />
+
+      <label for="country">Country:</label>
+      <select id="country">
+        <option value="ch">Switzerland</option>
+        <option value="fr">France</option>
+        <option value="de">Germany</option>
+        <option value="nl">The Netherlands</option>
+      </select>
+
+      <label for="zip-code">Zip code:</label>
+      <input
+        id="zip-code"
+        name="zip-code"
+        type="text"
+        pattern="[0-9]*"
+        maxlength="5"
+        minlength="4"
+        placeholder="ex: 05465"
+        required
+      />
+
+      <label for="password">Enter your password:</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Password"
+        required
+      />
+
+      <label for="password-confirmation">Confirm your password:</label>
+      <input
+        type="password"
+        name="password-confirmation"
+        id="password-confirmation"
+        placeholder="Password"
+        required
+      />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

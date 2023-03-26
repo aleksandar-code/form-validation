@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  gap: 10px;
+}
+
+#password-confirmation + button[type="submit"] {
+  margin-top: 10px;
+}
+
+form > *:invalid {
+  border: 2px dotted red;
+  outline: red;
+}
+
+form > *:valid:not(button, select) {
+  border: 2px dotted green;
+  outline: green;
+}
+
+form > * {
+  border-radius: 8px;
+}
